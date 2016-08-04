@@ -1,13 +1,9 @@
 <resources>
+
     <string name="app_name">NNNBlogger</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
     <string name="blog_post_title">Blog Posts</string>
-    <!--<string name="title_activity_blog_post_detail">BlogPostDetailActivity</string>-->
-    <!--<string name="field">post</string>-->
-    <!--<string name="title">Title</string>-->
-    <!--<integer name="blogDate">Blog Date</integer>-->
-    <!--<image name="blogPics">Blog Pics</image>-->
-    <!--<image name="featuredImage">Featured Image</image>-->
+    <string name="title_activity_blog_post_detail">BlogPostsDetailActiviity</string>
 
 </resources>

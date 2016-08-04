@@ -13,22 +13,22 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+    // Set the content of the activity to use the activity_main.xml layout file
         setContentView(R.layout.activity_main);
 
 
     Button btn =(Button) findViewById(R.id.btn);
-
 
     btn.setOnClickListener(new View.OnClickListener() {
 
         @Override
 
         public void onClick(View v) {
-            // Open About BlogPostsActivity
+
+                // Open About BlogPostsActivity
             Intent intent = new Intent(MainActivity.this, BlogPostsActivity.class);
             startActivity(intent);
-        }
-    });
-    }
-}
+            }
 
+        });
+    }}

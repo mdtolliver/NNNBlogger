@@ -11,7 +11,7 @@ import android.text.TextUtils;
  */
 public class BlogPostsPost implements Serializable {
 
-    //private static final long serialVersionUID = -8959832007991513854L;
+    private static final long serialVersionUID = -8959832007991513854L;
 
     private String title;
     private int blogDate;
