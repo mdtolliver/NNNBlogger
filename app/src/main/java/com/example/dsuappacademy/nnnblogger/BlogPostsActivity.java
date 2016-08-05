@@ -1,6 +1,7 @@
 package com.example.dsuappacademy.nnnblogger;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -25,6 +26,8 @@ public class BlogPostsActivity extends Activity {
     private ContentfulClient client;
     public static final String POST_DETAIL_KEY = "post";
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,16 +46,22 @@ public class BlogPostsActivity extends Activity {
 
         client.getBlogPosts(new JsonHttpResponseHandler() {
 
-
-
             @Override
             public void onSuccess(int code, Header[] headers, JSONObject body) {
                 JSONArray items = null;
+                JSONArray assets = null;
+
                 try {
+
+                    //Get images array
+                    assets = body.getJSONObject("includes").getJSONArray("Asset");
+
                     // Get the posts json array
                     items = body.getJSONArray("items");
+
+
                     // Parse json array into array of model objects
-                    ArrayList<BlogPostsPost> posts = BlogPostsPost.fromJson(items);
+                    ArrayList<BlogPostsPost> posts = BlogPostsPost.fromJson(items, assets);
                     // Load model objects into the adapter which displays them
                     for (BlogPostsPost post : posts) {
 
