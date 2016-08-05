@@ -1,3 +1,16 @@
+*.apk
+*.ap_
+*.dex
+*.class
+bin/
+gen/
+out/
+proguard/
+*.log
+.navigation/
+.idea/
+*.jks
+gen-external-apklibs
 *.iml
 .gradle
 /local.properties
