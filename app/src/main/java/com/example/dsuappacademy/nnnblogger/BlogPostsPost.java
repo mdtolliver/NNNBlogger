@@ -14,7 +14,7 @@ public class BlogPostsPost implements Serializable {
     private static final long serialVersionUID = -8959832007991513854L;
 
     private String title;
-    private int blogDate;
+    private String blogDate;
     private String blogBody;
     private String blogPics;
     private String featuredImage;
@@ -46,13 +46,17 @@ public class BlogPostsPost implements Serializable {
     // `ratings.critics_score` and the `abridged_cast`
     public static BlogPostsPost fromJson(JSONObject jsonObject) {
         BlogPostsPost b = new BlogPostsPost();
+
         try {
+            JSONObject fields = jsonObject.getJSONObject("fields");
             // Deserialize json into object fields
-            b.title = jsonObject.getString("title");
-            b.blogDate = jsonObject.getInt("blogDate");
-            b.blogBody = jsonObject.getString("blogBody");
-            b.blogPics = jsonObject.getJSONObject("blogpics").getString("thumbnail");
-            b.featuredImage = jsonObject.getString("featureImage");
+            b.title = fields.getString("title");
+            //blogDate mayneed to be string
+            b.blogDate = fields.getString("blogDate");
+            b.blogBody = fields.getString("blogBody");
+            //not sure wht this looks like
+            //b.blogPics = jsonObject.getJSONObject("blogpics");
+            //b.featuredImage = fields.getJSONObject("featureImage").getJSONObject("sys").getString("id");
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -66,16 +70,20 @@ public class BlogPostsPost implements Serializable {
         return title;
     }
 
-    public int getBlogdate() {
+    public String getBlogDate() {
         return blogDate;
     }
 
-    public String getBlogpics() {
+    public String getBlogPics() {
         return blogPics;
     }
 
-    public String getFeaturedimage() {
+    public String getFeaturedImage() {
         return featuredImage;
+    }
+
+    public String getBlogBody() {
+        return blogBody;
     }
 
 }
