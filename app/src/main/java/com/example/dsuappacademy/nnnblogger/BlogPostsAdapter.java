@@ -8,6 +8,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
 
 
@@ -35,14 +37,17 @@ import java.util.ArrayList;
             TextView tvblogDate = (TextView) convertView.findViewById(R.id.tvblogDate);
             TextView tvblogBody = (TextView) convertView.findViewById(R.id.tvblogBody);
             //ImageView ivblogPics = (ImageView) convertView.findViewById(R.id.ivblogPics);
-            //ImageView ivfeaturedImage = (ImageView) convertView.findViewById(R.id.ivFeaturedImage);
+            ImageView ivfeaturedImage = (ImageView) convertView.findViewById(R.id.ivFeaturedImage);
 
 //            // Populate the data into the template view using the data object
             tvTitle.setText(blog.getTitle());
             tvblogDate.setText(blog.getBlogDate());
             tvblogBody.setText(blog.getBlogBody());
             //ivblogPics.setImageDrawable(blog.getBlogPics());
-            //ivfeaturedImage.setImageDrawable(blog.getfeaturedImage());
+
+            if (blog.getFeaturedImage() != null){
+                Picasso.with(getContext()).load(blog.getFeaturedImage()).into(ivfeaturedImage);
+            }
 
 //            // Return the completed view to render on screen
             return convertView;
