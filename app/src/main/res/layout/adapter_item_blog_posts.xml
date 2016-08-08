@@ -4,7 +4,6 @@
     android:layout_height="match_parent"
     android:gravity="top"
     android:padding="5dp" >
-
         <!-- @drawable/large_movie_poster sourced from
              http://content8.flixster.com/movie/11/15/86/11158674_pro.jpg -->
         <ImageView
@@ -27,7 +26,8 @@
             android:layout_marginLeft="5dp"
             android:layout_toRightOf="@+id/ivFeaturedImage"
             android:text="Blog post title"
-            android:textSize="12sp" />
+            android:textSize="12sp"
+            />
 
         <TextView
             android:id="@+id/tvblogDate"

@@ -14,17 +14,16 @@ public class CommentActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_comment);
     }
-        public void commentActivity(View view) {
+    public void commentActivity(View view) {
             //Intent to open email & submit new member.
             Intent intent = new Intent(Intent.ACTION_SENDTO);
             intent.setData(Uri.parse("mailto:")); // only email apps should handle this
             intent.putExtra(Intent.EXTRA_EMAIL, new String[]{"mdtolliver@hotmail.com"});
-            intent.putExtra(Intent.EXTRA_SUBJECT, "Reader Feedback");
+            intent.putExtra(Intent.EXTRA_SUBJECT, "Reader feedback engages others in #DefiningBlackCommunity");
 
             if (intent.resolveActivity(getPackageManager()) != null)
                 startActivity(intent);
         }
-
 
 }
 

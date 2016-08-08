@@ -8,5 +8,45 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.dsuappacademy.nnnblogger.CommentActivity">
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/Text"
+    android:text="#DefiningBlackCommunity YOU CAN DEFINE SOMETHING THAT HAS MEANING."
+    android:background="@android:color/black"
+    android:textColor="@android:color/white"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentEnd="true"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:textSize="18sp"
+    android:textStyle="bold" />
+    />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/logo2_picture"
+        android:src="@drawable/pop"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tap here to Comment"
+        android:onClick="commentActivity"
+        android:background="@android:color/black"
+        android:textColor="@android:color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="false"
+        android:textSize="18sp"
+        android:textStyle="normal" />
 
 </RelativeLayout>

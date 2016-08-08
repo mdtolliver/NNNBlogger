@@ -37,7 +37,7 @@ import java.util.ArrayList;
             TextView tvblogDate = (TextView) convertView.findViewById(R.id.tvblogDate);
             TextView tvblogBody = (TextView) convertView.findViewById(R.id.tvblogBody);
             //ImageView ivblogPics = (ImageView) convertView.findViewById(R.id.ivblogPics);
-            ImageView ivfeaturedImage = (ImageView) convertView.findViewById(R.id.ivFeaturedImage);
+            ImageView ivFeaturedImage = (ImageView) convertView.findViewById(R.id.ivFeaturedImage);
 
 //            // Populate the data into the template view using the data object
             tvTitle.setText(blog.getTitle());
@@ -46,7 +46,7 @@ import java.util.ArrayList;
             //ivblogPics.setImageDrawable(blog.getBlogPics());
 
             if (blog.getFeaturedImage() != null){
-                Picasso.with(getContext()).load(blog.getFeaturedImage()).into(ivfeaturedImage);
+                Picasso.with(getContext()).load(blog.getFeaturedImage()).into(ivFeaturedImage);
             }
 
 //            // Return the completed view to render on screen
